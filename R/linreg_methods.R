@@ -82,6 +82,11 @@ plot.linreg <- function(x, ...) {
 #' @param ... Additional arguments (not used)
 #' @return Vector of residuals
 #' @export
+resid <- function(object, ...) {
+  UseMethod("resid")
+}
+
+#' @export
 resid.linreg <- function(object, ...) {
   return(object$residuals)
 }

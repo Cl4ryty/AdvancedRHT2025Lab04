@@ -2,7 +2,8 @@
 % Please edit documentation in R/linreg_methods.R
 \name{print.linreg}
 \alias{print.linreg}
-\title{Print method for linreg objects}
+\title{Print method for linreg objects
+Prints the call the object was created with and the calculated regression coefficients.}
 \usage{
 \method{print}{linreg}(x, ...)
 }
@@ -13,4 +14,5 @@
 }
 \description{
 Print method for linreg objects
+Prints the call the object was created with and the calculated regression coefficients.
 }

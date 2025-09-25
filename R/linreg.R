@@ -28,7 +28,7 @@ linreg <- function(formula, data, method = "ols") {
   response_var <- formula_vars[1]
 
   # Create model matrix and response vector
-  X <- model.matrix(formula, data)
+  X <- stats::model.matrix(formula, data)
   y <- data[[response_var]]
 
   # Check dimensions
@@ -89,7 +89,7 @@ linreg <- function(formula, data, method = "ols") {
   t_values <- as.vector(beta_hat) / se_beta
 
   # p-values (two-tailed test)
-  p_values <- 2 * pt(-abs(t_values), df = df)
+  p_values <- 2 * stats::pt(-abs(t_values), df = df)
 
   # Create coefficient names
   coef_names <- colnames(X)

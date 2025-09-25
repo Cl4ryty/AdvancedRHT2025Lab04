@@ -2,7 +2,9 @@
 % Please edit documentation in R/linreg_methods.R
 \name{summary.linreg}
 \alias{summary.linreg}
-\title{Summary method for linreg objects}
+\title{Summary method for linreg objects
+Prints the call used to create the linreg object, its coefficients, the
+residual standard error, and degrees of freedom.}
 \usage{
 \method{summary}{linreg}(object, ...)
 }
@@ -16,4 +18,6 @@ Invisible summary object (prints automatically)
 }
 \description{
 Summary method for linreg objects
+Prints the call used to create the linreg object, its coefficients, the
+residual standard error, and degrees of freedom.
 }

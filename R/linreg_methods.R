@@ -1,4 +1,5 @@
 #' Print method for linreg objects
+#' Prints the call the object was created with and the calculated regression coefficients.
 #'
 #' @param x A linreg object
 #' @param ... Additional arguments (not used)
@@ -12,11 +13,13 @@ print.linreg <- function(x, ...) {
 
 #' Plot method for linreg objects
 #'
-#' Creates diagnostic plots using ggplot2
+#' Creates two diagnostic plots using ggplot2, one plotting the residuals versus
+#' fitted values and the scale-location plot (the square root of the
+#' standardized residuals force the fitted values).
 #'
 #' @param x A linreg object
 #' @param ... Additional arguments (not used)
-#' @return A list containing two ggplot objects
+#' @return A list containing two ggplot objects, the Residuals vs Fitted and Scale-Location plots
 #' @export
 plot.linreg <- function(x, ...) {
   if (!requireNamespace("ggplot2", quietly = TRUE)) {
@@ -27,6 +30,11 @@ plot.linreg <- function(x, ...) {
   fitted_vals <- x$fitted.values
   residuals <- x$residuals
   standardized_residuals <- sqrt(abs(residuals / x$sigma))
+
+  # set to NULL first to get rid of check note that cannot see them in the df
+  fitted <- NULL
+  obs_number <- NULL
+  std_residuals <- NULL
 
   # Create data frame for plotting
   plot_data <- data.frame(
@@ -117,6 +125,8 @@ coef.linreg <- function(object, ...) {
 }
 
 #' Summary method for linreg objects
+#' Prints the call used to create the linreg object, its coefficients, the
+#' residual standard error, and degrees of freedom.
 #'
 #' @param object A linreg object
 #' @param ... Additional arguments (not used)

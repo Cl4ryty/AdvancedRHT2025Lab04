@@ -12,8 +12,10 @@
 \item{...}{Additional arguments (not used)}
 }
 \value{
-A list containing two ggplot objects
+A list containing two ggplot objects, the Residuals vs Fitted and Scale-Location plots
 }
 \description{
-Creates diagnostic plots using ggplot2
+Creates two diagnostic plots using ggplot2, one plotting the residuals versus
+fitted values and the scale-location plot (the square root of the
+standardized residuals force the fitted values).
 }

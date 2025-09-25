@@ -7,7 +7,7 @@ Authors@R: c(person("Shipra", "Rukmini",
                   role = c("aut", "cre")),
              person("Hannah", "Köster", 
                   email = "hanko154@student.liu.se", 
-                  role = c("aut", "cre")) )
+                  role = c("aut")) )
 Description: Implementation of linear regression using ordinary least squares and QR decomposition.
 License: MIT + file LICENSE
 Encoding: UTF-8

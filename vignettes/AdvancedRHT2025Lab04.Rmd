@@ -82,21 +82,19 @@ coef(mod_ols)
 ### Structure of the linreg object
 The linreg object returned by the linreg function is a list containing the results of the linear regression as well as information about the original call such as formula and provided data. 
 Specifically the following fields are returned:
- * coefficients
- * residuals
- * fitted.values
- * df.residual
-* sigma
-* var_coef
-* std_error
-* t_values
-* p_values
-* call
-* formula
-* data_name
-* method
-* model_matrix
-* response
 
-
-
+- coefficients
+- residuals
+- fitted.values
+- df.residual
+- sigma
+- var_coef
+- std_error
+- t_values
+- p_values
+- call
+- formula
+- data_name
+- method
+- model_matrix
+- response
